@@ -1,0 +1,549 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  outline: none;
+}
+
+.grid-containerD {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.2fr 3fr 1fr 1fr;
+      grid-template-columns: 0.2fr 3fr 1fr 1fr;
+  -ms-grid-rows: 1fr 3fr 2fr 1fr 0.1fr;
+      grid-template-rows: 1fr 3fr 2fr 1fr 0.1fr;
+      grid-template-areas: "navbar navbar navbar navbar" "sidebar main screen1 fill" "sidebar main screen2 fill" "sidebar main screen2 fill" "Footer Footer Footer Footer";
+  height: 100vh;
+}
+
+.grid-containerD .chatDiv {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 4;
+  grid-area: fill;
+  background-color: #a1f15f;
+}
+
+.grid-containerD .chatDiv #img_min {
+  padding-top: 10px;
+  left: 86%;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.grid-containerD .nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: navbar;
+  background: #f9f8f3;
+}
+
+.grid-containerD .nav .btn_container {
+  text-decoration: none;
+  text-align: right;
+  margin-top: 25px;
+  margin-right: 30px;
+}
+
+.grid-containerD .nav .btn_container #btn_Contact,
+.grid-containerD .nav .btn_container #btn_Switch,
+.grid-containerD .nav .btn_container #btn_Faq {
+  margin-left: 10px;
+  padding: 5px !important;
+  border: 1px solid white !important;
+  font-weight: 700;
+  background: #f53a14;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.grid-containerD .nav .btn_container #btn_Contact {
+  padding: 8px !important;
+}
+
+.grid-containerD .nav .btn_container #btn_Contact:hover {
+  background: #7e0808;
+}
+
+.grid-containerD .nav .btn_container #btn_Switch {
+  padding: 6px;
+}
+
+.grid-containerD .nav .btn_container #btn_Switch:hover {
+  background: #7e0808;
+}
+
+.grid-containerD .nav .btn_container #btn_Faq:hover {
+  background: #7e0808;
+}
+
+.grid-containerD .nav .btn_container #btn_Info {
+  margin-left: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 6px;
+  border: 1px solid #535050;
+  background: whitesmoke;
+  font-weight: 700;
+  padding: 5px;
+  color: black;
+}
+
+.grid-containerD .nav .btn_container #btn_Info:hover {
+  background: #333333;
+  color: white;
+}
+
+.grid-containerD .nav .btn_container .stars .rate {
+  float: right;
+  height: 46px;
+  padding: 0 10px;
+}
+
+.grid-containerD .nav .btn_container .stars .rate:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+
+.grid-containerD .nav .btn_container .stars .rate:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
+}
+
+.grid-containerD .nav .btn_container .stars .rate:not(:checked) > label:before {
+  content: '★ ';
+}
+
+.grid-containerD .nav .btn_container .stars .rate > input:checked ~ label {
+  color: #ffc700;
+}
+
+.grid-containerD .nav .btn_container .stars .rate:not(:checked) > label:hover,
+.grid-containerD .nav .btn_container .stars .rate:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+
+.grid-containerD .nav .btn_container .stars .rate > input:checked + label:hover,
+.grid-containerD .nav .btn_container .stars .rate > input:checked + label:hover ~ label,
+.grid-containerD .nav .btn_container .stars .rate > input:checked ~ label:hover,
+.grid-containerD .nav .btn_container .stars .rate > input:checked ~ label:hover ~ label,
+.grid-containerD .nav .btn_container .stars .rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+.grid-containerD .sidebar {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: sidebar;
+  background: #c5d2db;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.grid-containerD .sidebar #MicAnc {
+  position: absolute;
+  bottom: 40px;
+  left: 0px;
+}
+
+.grid-containerD .WhiteBoard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  grid-area: main;
+  background: gold;
+  border: 2px solid white;
+}
+
+.grid-containerD .WhiteBoard .childfooter {
+  border-radius: 20px;
+  margin-top: auto;
+  min-height: 30px;
+  background: yellowgreen;
+}
+
+.grid-containerD .screen1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: screen1;
+  background: #ec3737;
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+}
+
+.grid-containerD .screen2 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: screen2;
+  background: #da7979;
+  border-bottom: 2px solid white;
+}
+
+.grid-containerD .footerbar {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: Footer;
+  background: #0072ae;
+  color: white;
+  font-size: 20px;
+  min-height: 2.9em;
+}
+
+.grid-containerD .footerbar #mainContent {
+  color: white;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-top: 17px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.grid-containerH {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.2fr 3fr 1fr 0px;
+      grid-template-columns: 0.2fr 3fr 1fr 0px;
+  -ms-grid-rows: 1fr 3fr 2fr 1fr 0.1fr;
+      grid-template-rows: 1fr 3fr 2fr 1fr 0.1fr;
+      grid-template-areas: "navbar navbar navbar navbar" "sidebar main screen1 fill" "sidebar main screen2 fill" "sidebar main screen2 fill" "Footer Footer Footer Footer";
+  height: 100vh;
+}
+
+.grid-containerH .chatDiv {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 4;
+  grid-area: fill;
+  background-color: #a1f15f;
+}
+
+.grid-containerH .chatDiv #img_min {
+  padding-top: 10px;
+  left: 86%;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.grid-containerH .nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: navbar;
+  background: #f9f8f3;
+}
+
+.grid-containerH .nav .btn_container {
+  text-decoration: none;
+  text-align: right;
+  margin-top: 25px;
+  margin-right: 30px;
+}
+
+.grid-containerH .nav .btn_container #btn_Contact,
+.grid-containerH .nav .btn_container #btn_Switch,
+.grid-containerH .nav .btn_container #btn_Faq {
+  margin-left: 10px;
+  padding: 5px !important;
+  border: 1px solid white !important;
+  font-weight: 700;
+  background: #f53a14;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.grid-containerH .nav .btn_container #btn_Contact {
+  padding: 8px !important;
+}
+
+.grid-containerH .nav .btn_container #btn_Contact:hover {
+  background: #7e0808;
+}
+
+.grid-containerH .nav .btn_container #btn_Switch {
+  padding: 6px;
+}
+
+.grid-containerH .nav .btn_container #btn_Switch:hover {
+  background: #7e0808;
+}
+
+.grid-containerH .nav .btn_container #btn_Faq:hover {
+  background: #7e0808;
+}
+
+.grid-containerH .nav .btn_container #btn_Info {
+  margin-left: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 6px;
+  border: 1px solid #535050;
+  background: whitesmoke;
+  font-weight: 700;
+  padding: 5px;
+  color: black;
+}
+
+.grid-containerH .nav .btn_container #btn_Info:hover {
+  background: #333333;
+  color: white;
+}
+
+.grid-containerH .nav .btn_container .stars .rate {
+  float: right;
+  height: 46px;
+  padding: 0 10px;
+}
+
+.grid-containerH .nav .btn_container .stars .rate:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+
+.grid-containerH .nav .btn_container .stars .rate:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
+}
+
+.grid-containerH .nav .btn_container .stars .rate:not(:checked) > label:before {
+  content: '★ ';
+}
+
+.grid-containerH .nav .btn_container .stars .rate > input:checked ~ label {
+  color: #ffc700;
+}
+
+.grid-containerH .nav .btn_container .stars .rate:not(:checked) > label:hover,
+.grid-containerH .nav .btn_container .stars .rate:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+
+.grid-containerH .nav .btn_container .stars .rate > input:checked + label:hover,
+.grid-containerH .nav .btn_container .stars .rate > input:checked + label:hover ~ label,
+.grid-containerH .nav .btn_container .stars .rate > input:checked ~ label:hover,
+.grid-containerH .nav .btn_container .stars .rate > input:checked ~ label:hover ~ label,
+.grid-containerH .nav .btn_container .stars .rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+.grid-containerH .sidebar {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: sidebar;
+  background: #c5d2db;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.grid-containerH .sidebar #MicAnc {
+  position: absolute;
+  bottom: 40px;
+  left: 0px;
+}
+
+.grid-containerH .WhiteBoard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  grid-area: main;
+  background: gold;
+  border: 2px solid white;
+}
+
+.grid-containerH .WhiteBoard .childfooter {
+  border-radius: 20px;
+  margin-top: auto;
+  min-height: 30px;
+  background: yellowgreen;
+}
+
+.grid-containerH .screen1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: screen1;
+  background: #ec3737;
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+}
+
+.grid-containerH .screen2 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: screen2;
+  background: #da7979;
+  border-bottom: 2px solid white;
+}
+
+.grid-containerH .footerbar {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: Footer;
+  background: #0072ae;
+  color: white;
+  font-size: 20px;
+  min-height: 2.9em;
+}
+
+.grid-containerH .footerbar #mainContent {
+  color: white;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-top: 17px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#FileIco {
+  height: 30px;
+  padding: 40px 20px 20px 20px;
+}
+
+#EraserIco {
+  height: 30px;
+  padding-top: 20px;
+  padding-left: 2px;
+}
+
+#MicIco {
+  padding: 26em 0px 20px 10px;
+  height: 50px;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 986px) {
+  .grid-container {
+    -ms-grid-columns: 0.2fr 3fr 1.5fr 3px;
+        grid-template-columns: 0.2fr 3fr 1.5fr 3px;
+    -ms-grid-rows: 1fr 3fr 2fr 1fr 0.1fr;
+        grid-template-rows: 1fr 3fr 2fr 1fr 0.1fr;
+        grid-template-areas: "navbar navbar navbar navbar" "sidebar main screen1 fill" "sidebar main screen2 fill" "sidebar main screen2 fill" "Footer Footer Footer Footer";
+    height: 100vh;
+  }
+  .grid-container .WhiteBoard .childfooter {
+    background: #e7b019;
+  }
+  .grid-container .WhiteBoard .childfooter p {
+    font-size: 15px !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    overflow: hidden;
+  }
+  .grid-container {
+    -ms-grid-columns: 0.2fr 3fr 1.5fr 3px;
+        grid-template-columns: 0.2fr 3fr 1.5fr 3px;
+    -ms-grid-rows: 1fr 3fr 2fr 1fr 3fr 1fr 3fr;
+        grid-template-rows: 1fr 3fr 2fr 1fr 3fr 1fr 3fr;
+        grid-template-areas: "navbar navbar navbar navbar" "sidebar main  main fill" "sidebar main  main fill" "sidebar screen1 screen1 fill" "sidebar screen1 screen1 fill" "sidebar screen2 screen2 fill" "sidebar screen2 screen2 fill" "Footer Footer Footer Footer";
+  }
+  .grid-container .WhiteBoard {
+    border-bottom: none;
+  }
+  .grid-container .WhiteBoard .childfooter {
+    background: #263aad;
+  }
+  .grid-container .WhiteBoard .childfooter p {
+    font-size: 10px !important;
+    color: white;
+  }
+  .grid-container .screen1 {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-area: screen1;
+    background: #f09898;
+  }
+  .grid-container .screen2 {
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-area: screen2;
+    background: #1a1b15;
+  }
+  .nav {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: navbar;
+    background: #f9f8f3;
+  }
+  .nav .btn_container {
+    margin-top: 25px;
+    margin-right: 30px;
+  }
+  .nav .btn_container #btn_Contact,
+  .nav .btn_container #btn_Switch,
+  .nav .btn_container #btn_Faq {
+    margin-left: 10px;
+    padding: 5px !important;
+    font-size: 11px !important;
+    font-weight: 700;
+  }
+  .nav .btn_container #btn_Contact {
+    padding: 8px !important;
+  }
+  .nav .btn_container #btn_Switch {
+    padding: 6px;
+  }
+  .nav .btn_container #btn_Info {
+    font-size: 11px !important;
+    padding: 6px;
+    font-weight: 700;
+    padding: 5px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

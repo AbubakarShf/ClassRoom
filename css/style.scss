@@ -1,0 +1,506 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    outline: none;
+}
+
+.grid-containerD {
+    display: grid;
+    grid-template-columns: 0.2fr 3fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr 2fr 1fr 0.1fr;
+    grid-template-areas:
+        "navbar navbar navbar navbar"
+        "sidebar main screen1 fill"
+        "sidebar main screen2 fill"
+        "sidebar main screen2 fill"
+        "Footer Footer Footer Footer";
+    height: 100vh;
+   
+.chatDiv{
+    
+    grid-area: fill;
+    background-color: #a1f15f;    
+    #img_min{
+        padding-top: 10px;
+        left: 86%;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+}
+    .nav {
+        grid-area: navbar;
+        background: rgb(249, 248, 243);
+
+        .btn_container {
+            text-decoration: none;
+            text-align: right;
+            margin-top: 25px;
+            margin-right: 30px;
+
+            #btn_Contact,
+            #btn_Switch,
+            #btn_Faq {
+                margin-left: 10px;
+                padding: 5px !important;
+                border: 1px solid white !important;
+                font-weight: 700;
+                background: rgb(245, 58, 20);
+                color: white;
+                border-radius: 8px;
+                font-size: 16px;
+            }
+
+            #btn_Contact {
+                padding: 8px !important;
+            }
+
+            #btn_Contact:hover {
+                background: rgb(126, 8, 8);
+            }
+
+            #btn_Switch {
+                padding: 6px;
+            }
+
+            #btn_Switch:hover {
+                background: rgb(126, 8, 8);
+            }
+
+            #btn_Faq:hover {
+                background: rgb(126, 8, 8);
+            }
+
+            #btn_Info {
+                margin-left: 10px;
+                border-radius: 8px;
+                font-size: 16px;
+                padding: 6px;
+                border: 1px solid rgb(83, 80, 80);
+                background: whitesmoke;
+                font-weight: 700;
+                padding: 5px;
+                color: black;
+            }
+
+            #btn_Info:hover {
+                background: rgb(51, 51, 51);
+                color: white;
+            }
+            .stars {         
+                .rate {
+                    float: right;
+                    height: 46px;
+                    padding: 0 10px;
+                }
+    
+                .rate:not(:checked)>input {
+                    position: absolute;
+                    top: -9999px;
+                }
+    
+                .rate:not(:checked)>label {
+                    float: right;
+                    width: 1em;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    cursor: pointer;
+                    font-size: 30px;
+                    color: #ccc;
+                }
+    
+                .rate:not(:checked)>label:before {
+                    content: '★ ';
+                }
+    
+                .rate>input:checked~label {
+                    color: #ffc700;
+                }
+    
+                .rate:not(:checked)>label:hover,
+                .rate:not(:checked)>label:hover~label {
+                    color: #deb217;
+                }
+    
+                .rate>input:checked+label:hover,
+                .rate>input:checked+label:hover~label,
+                .rate>input:checked~label:hover,
+                .rate>input:checked~label:hover~label,
+                .rate>label:hover~input:checked~label {
+                    color: #c59b08;
+                }
+            }
+        }
+            
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+        background: rgb(197, 210, 219);
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+        #MicAnc{
+            position: absolute;
+            bottom: 40px;
+            left: 0px;
+        }
+    }
+
+    .WhiteBoard {
+        display: flex;
+        flex-direction: column;
+        grid-area: main;
+        background: gold;
+        border: 2px solid white;
+
+        .childfooter {
+            border-radius: 20px;
+            margin-top: auto;
+            min-height: 30px;
+            background: yellowgreen;
+        }
+    }
+
+    .screen1 {
+        grid-area: screen1;
+        background: rgb(236, 55, 55);
+        border-bottom: 2px solid white;
+        border-top: 2px solid white;
+    }
+
+    .screen2 {
+        grid-area: screen2;
+        background: rgb(218, 121, 121);
+        border-bottom: 2px solid white;
+
+    }
+
+    .footerbar {
+        grid-area: Footer;
+        background: rgb(0, 114, 174);
+        color: white;
+        font-size: 20px;
+        min-height: 2.9em;
+
+        #mainContent{
+            color: white;
+            text-decoration: none;
+            display: flex;
+            flex-direction: row;
+            padding-top: 17px;
+            justify-content: center;
+
+        }
+    }
+}
+.grid-containerH {
+    display: grid;
+    grid-template-columns: 0.2fr 3fr 1fr 0px;
+    grid-template-rows: 1fr 3fr 2fr 1fr 0.1fr;
+    grid-template-areas:
+        "navbar navbar navbar navbar"
+        "sidebar main screen1 fill"
+        "sidebar main screen2 fill"
+        "sidebar main screen2 fill"
+        "Footer Footer Footer Footer";
+    height: 100vh;
+   
+.chatDiv{
+    
+    grid-area: fill;
+    background-color: #a1f15f;    
+    #img_min{
+        padding-top: 10px;
+        left: 86%;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+}
+    .nav {
+        grid-area: navbar;
+        background: rgb(249, 248, 243);
+
+        .btn_container {
+            text-decoration: none;
+            text-align: right;
+            margin-top: 25px;
+            margin-right: 30px;
+
+            #btn_Contact,
+            #btn_Switch,
+            #btn_Faq {
+                margin-left: 10px;
+                padding: 5px !important;
+                border: 1px solid white !important;
+                font-weight: 700;
+                background: rgb(245, 58, 20);
+                color: white;
+                border-radius: 8px;
+                font-size: 16px;
+            }
+
+            #btn_Contact {
+                padding: 8px !important;
+            }
+
+            #btn_Contact:hover {
+                background: rgb(126, 8, 8);
+            }
+
+            #btn_Switch {
+                padding: 6px;
+            }
+
+            #btn_Switch:hover {
+                background: rgb(126, 8, 8);
+            }
+
+            #btn_Faq:hover {
+                background: rgb(126, 8, 8);
+            }
+
+            #btn_Info {
+                margin-left: 10px;
+                border-radius: 8px;
+                font-size: 16px;
+                padding: 6px;
+                border: 1px solid rgb(83, 80, 80);
+                background: whitesmoke;
+                font-weight: 700;
+                padding: 5px;
+                color: black;
+            }
+
+            #btn_Info:hover {
+                background: rgb(51, 51, 51);
+                color: white;
+            }
+            .stars {         
+                .rate {
+                    float: right;
+                    height: 46px;
+                    padding: 0 10px;
+                }
+    
+                .rate:not(:checked)>input {
+                    position: absolute;
+                    top: -9999px;
+                }
+    
+                .rate:not(:checked)>label {
+                    float: right;
+                    width: 1em;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    cursor: pointer;
+                    font-size: 30px;
+                    color: #ccc;
+                }
+    
+                .rate:not(:checked)>label:before {
+                    content: '★ ';
+                }
+    
+                .rate>input:checked~label {
+                    color: #ffc700;
+                }
+    
+                .rate:not(:checked)>label:hover,
+                .rate:not(:checked)>label:hover~label {
+                    color: #deb217;
+                }
+    
+                .rate>input:checked+label:hover,
+                .rate>input:checked+label:hover~label,
+                .rate>input:checked~label:hover,
+                .rate>input:checked~label:hover~label,
+                .rate>label:hover~input:checked~label {
+                    color: #c59b08;
+                }
+            }
+        }
+            
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+        background: rgb(197, 210, 219);
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+        #MicAnc{
+            position: absolute;
+            bottom: 40px;
+            left: 0px;
+        }
+    }
+
+    .WhiteBoard {
+        display: flex;
+        flex-direction: column;
+        grid-area: main;
+        background: gold;
+        border: 2px solid white;
+
+        .childfooter {
+            border-radius: 20px;
+            margin-top: auto;
+            min-height: 30px;
+            background: yellowgreen;
+        }
+    }
+
+    .screen1 {
+        grid-area: screen1;
+        background: rgb(236, 55, 55);
+        border-bottom: 2px solid white;
+        border-top: 2px solid white;
+    }
+
+    .screen2 {
+        grid-area: screen2;
+        background: rgb(218, 121, 121);
+        border-bottom: 2px solid white;
+
+    }
+
+    .footerbar {
+        grid-area: Footer;
+        background: rgb(0, 114, 174);
+        color: white;
+        font-size: 20px;
+        min-height: 2.9em;
+
+        #mainContent{
+            color: white;
+            text-decoration: none;
+            display: flex;
+            flex-direction: row;
+            padding-top: 17px;
+            justify-content: center;
+        }
+    }
+}
+
+
+#FileIco {
+    height: 30px;
+    padding: 40px 20px 20px 20px;
+}
+
+#EraserIco {
+    height: 30px;
+    padding-top: 20px;
+    padding-left: 2px;
+}
+
+#MicIco {
+    padding: 26em 0px 20px 10px;
+    height: 50px;
+}
+@media only screen and (min-width:600px) and (max-width:986px) {
+    .grid-container {
+        grid-template-columns: 0.2fr 3fr 1.5fr 3px;
+        grid-template-rows: 1fr 3fr 2fr 1fr 0.1fr;
+        grid-template-areas:
+            "navbar navbar navbar navbar"
+            "sidebar main screen1 fill"
+            "sidebar main screen2 fill"
+            "sidebar main screen2 fill"
+            "Footer Footer Footer Footer";
+        height: 100vh;
+
+        .WhiteBoard {
+            .childfooter {
+                background: rgb(231, 176, 25);
+
+                p {
+                    font-size: 15px !important;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width:480px) {
+    body {
+        overflow: hidden;
+    }
+
+    .grid-container {
+        grid-template-columns: 0.2fr 3fr 1.5fr 3px;
+        grid-template-rows: 1fr 3fr 2fr 1fr 3fr 1fr 3fr;
+        grid-template-areas:
+            "navbar navbar navbar navbar"
+            "sidebar main  main fill"
+            "sidebar main  main fill"
+            "sidebar screen1 screen1 fill"
+            "sidebar screen1 screen1 fill"
+            "sidebar screen2 screen2 fill"
+            "sidebar screen2 screen2 fill"
+            "Footer Footer Footer Footer";
+
+        .WhiteBoard {
+            border-bottom: none;
+
+            .childfooter {
+                background: rgb(38, 58, 173);
+
+                p {
+                    font-size: 10px !important;
+                    color: white;
+                }
+            }
+        }
+
+        .screen1 {
+            grid-area: screen1;
+            background: rgb(240, 152, 152);
+        }
+
+        .screen2 {
+            grid-area: screen2;
+            background: rgb(26, 27, 21);
+        }
+    }
+
+    .nav {
+        grid-area: navbar;
+        background: rgb(249, 248, 243);
+
+        .btn_container {
+            margin-top: 25px;
+            margin-right: 30px;
+
+            #btn_Contact,
+            #btn_Switch,
+            #btn_Faq {
+                margin-left: 10px;
+                padding: 5px !important;
+                font-size: 11px !important;
+                font-weight: 700;
+            }
+
+            #btn_Contact {
+                padding: 8px !important;
+            }
+
+            #btn_Switch {
+                padding: 6px;
+            }
+
+            #btn_Info {
+                font-size: 11px !important;
+                padding: 6px;
+                font-weight: 700;
+                padding: 5px;
+            }
+        }
+    }
+}
